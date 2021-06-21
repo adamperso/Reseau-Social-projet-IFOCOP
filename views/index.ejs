@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReseauSocialAdamBoulakhrif</title>
+    <link rel="stylesheet" href="moncss.css" />
+  </head>
+  <body>
+    <H1 style="color: bisque;">Reseau Social créé par Adam Boulakhrif</H1>
+    <div class="app">
+      <h1 class="chatTitle">Bienvenue sur IfoBook</h1>
+      <div class="container">
+        <div class="msgContainer" id="msgContainer"></div>
+      </div>
+      <div id="isWritting"></div>
+        <form action="/chat" method="POST" id="ReceveurMSG">
+          <input
+            type="text"
+            id="msgInput"
+            onkeypress="writting()"
+            onblur="notWritting()"
+            autofocus
+          />
+            <select name="receiver" id="receiverInput">
+                <option value="all">A tous</option>
+                <% profils.forEach(profil => { %>
+                    <option value="<%= profil.pseudo %>"><%= profil.pseudo %></option>
+                <% }); %>
+            </select>
+          <input type="submit" id="btnSend" value="Envoyer" />
+        </form>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="JSFront.js"></script>
+  </body>
+</html>

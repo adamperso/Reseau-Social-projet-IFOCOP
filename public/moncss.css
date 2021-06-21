@@ -1,0 +1,123 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.app {
+  width: 100%;
+  height: 100vh;
+  background-color: salmon;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.msgContainer {
+  width: 75%;
+  height: 70vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.chatTitle {
+  text-align: center;
+  margin: 25px 0 50px 0;
+  color: rgb(235, 214, 123);
+  margin-right: 10px;
+}
+
+/* user typing */
+#isWritting {
+  color: white;
+  font-style: italic;
+}
+
+/* form */
+.app > form {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  margin-left: 20%;
+}
+form > input[type="text"] {
+  display: inline-block;
+  width: 50%;
+  height: 35px;
+  border: none;
+}
+form > input[type="submit"] {
+  padding: 9px;
+  border: none;
+}
+
+/* User comes and quit */
+.newUser {
+  color: white;
+  font-style: italic;
+}
+.quitUser {
+  color: white;
+  font-style: italic;
+  margin-left: 64%;
+}
+
+/* Messages */
+.message {
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  max-width: 45%;
+  margin-left: 74%;
+}
+.newMessageMe {
+  background-color: yellowgreen;
+  margin-left: 70%;
+  margin-top: 2%;
+}
+.newMessageAll {
+  background-color: rgb(204, 211, 211);
+  margin-top: 2%;
+}
+.whisper {
+  background-color: rgb(235, 214, 123);
+  margin-top: 2%;
+  margin-left: 30%;
+}
+
+/* Messages from databse */
+.oldMessages {
+  background-color: rgb(204, 211, 211);
+  margin-top: 2%;
+}
+.oldWhispers {
+  background-color: rgb(235, 14, 14);
+  margin-top: 2%;
+}
+
+/* Channels */
+.channelList {
+  color: white;
+  width: 25%;
+}
+.elementList {
+  width: 60%;
+  background-color: rgb(131, 131, 131);
+  padding: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.elementList:hover {
+  background-color: rgb(105, 105, 105);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.inChannel {
+  background-color: rgb(105, 105, 105);
+  transition: 0.5s;
+}
