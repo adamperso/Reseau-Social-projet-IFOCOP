@@ -16,4 +16,10 @@ dependencies you have to download :
    - "nodemon": "^2.0.7",
    
    - "socket.io": "^4.1.2"
+   - 
   
+used port : 3000.
+
+Please clear your cache and cookies for the smooth running of the game.
+
+Unlimited connexions
